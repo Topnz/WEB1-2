@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #e6edf3;
+  background: #0a1428;
+  background-image: radial-gradient(
+      circle at 20% 0%,
+      #163057 0%,
+      transparent 60%
+    ),
+    radial-gradient(circle at 100% 10%, #0f2a45 0%, transparent 60%);
+  line-height: 1.4;
+}
+
+:root {
+  --panel: #0e1a2b;
+  --text: #e6edf3;
+  --muted: #9fb0c3;
+  --primary: #c8aa6e;
+  --accent: #0ac8b9;
+  --border: rgba(200, 170, 110, 0.35);
+  --radius: 8px;
+}
+
+/* NAV */
+nav {
+  background: #0e1a2b;
+  border-bottom: 2px solid #a63b3b;
+  padding: 16px;
+  text-align: center;
+}
+
+nav h1 {
+  font-family: "Cinzel", serif;
+  font-size: 40px;
+  margin: 0;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #3a1e1e 0%,
+    #7a2b2b 35%,
+    #ff4d1c 55%,
+    #7a2b2b 75%,
+    #3a1e1e 100%
+  );
+  background-size: 280% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: lavaShift 5s infinite alternate ease-in-out;
+}
+
+@keyframes lavaShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* LAYOUT */
+main {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 12px;
+}
+
+section {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin-bottom: 4px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+p {
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+form {
+  display: grid;
+  gap: 8px;
+}
+
+@media (min-width: 760px) {
+  form > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+label {
+  font-size: 14px;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #081421;
+  color: var(--text);
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* CHECKBOX */
+[role="group"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+[role="group"] label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* CUSTOM CHECKBOX (Cinzel checkmark) */
+label input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary);
+  background: #081421;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+label input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-family: "Cinzel", serif;
+  font-size: 13px; /* smaller */
+  color: var(--primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%); /* vertical nudge */
+}
+/* RANGE */
+input[type="range"] {
+  width: 100%;
+  background: #11243a;
+  height: 6px;
+  border-radius: 999px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+#atkValue {
+  margin-left: 6px;
+  color: var(--accent);
+}
+
+/* BUTTON */
+button {
+  background: var(--primary);
+  color: #0a1428;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+section:last-of-type > div {
+  display: flex;
+  justify-content: flex-end;
+}

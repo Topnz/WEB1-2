@@ -1,255 +1,386 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RIFTFORGE</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>RIFTFORGE</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-  <nav>
-    <label for="search1">Username:</label>
-    <input id="search1" type="text" placeholder="Your Username;" />
+  <body>
+    <nav>
+      <h1>RIFTFORGE</h1>
+    </nav>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-    <label for="search2">Password:</label>
-    <input id="search2" type="password" placeholder="Your Password;" />
-  </nav>
+    <main>
+      <section>
+        <h2>INFO</h2>
+        <p>
+          Welcome to Riftforge! Please input your desired stats for your
+          champion!
+        </p>
 
-  <main>
-    <section>
-      <h2>INFO</h2>
-      <p>Welcome to Riftforge! Please input your desired stats for your champion!</p>
-
-      <div>
-        <form>
-          <div>
+        <div>
+          <form>
             <div>
-              <label>Name</label>
-              <input name="name" type="text" placeholder="Champion Name" />
-            </div>
-
-            <div>
-              <label for="gender">Gender</label>
-              <select name="gender">
-                <option value="">— Choose —</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-                <option value="unknown">Unknown</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="age">Age</label>
-              <input name="age" type="number" min="0" max="99999" placeholder="Age" />
-            </div>
-
-            <div>
-            <label for="main-species">Main Species</label>
-            <input id="main-species" name="main-species" list="main-species-list" placeholder="Search or Choose..." />
-            <datalist id="main-species-list">
-                <option value="Ascended"></option>
-                <option value="Bear"></option>
-                <option value="Cat"></option>
-                <option value="Celestial"></option>
-                <option value="Darkin"></option>
-                <option value="Demon"></option>
-                <option value="Dragon"></option>
-                <option value="Faerie"></option>
-                <option value="Golem"></option>
-                <option value="Human"></option>
-                <option value="Minotaur"></option>
-                <option value="Naga"></option>
-                <option value="Plague Rat"></option>
-                <option value="Poro"></option>
-                <option value="Revenant"></option>
-                <option value="Spirit"></option>
-                <option value="Treant"></option>
-                <option value="Troll"></option>
-                <option value="Vastayan"></option>
-                <option value="Voidborn"></option>
-                <option value="Wolf"></option>
-                <option value="Yeti"></option>
-                <option value="Yordle"></option>
-            </datalist>
-            </div>
-
-            <div>
-            <label for="second-species">Secondary Species</label>
-            <input id="second-species" name="second-species" list="second-species-list" placeholder="Search or Choose..." />
-            <datalist id="second-species-list">
-                <option value="Ascended"></option>
-                <option value="Bear"></option>
-                <option value="Cat"></option>
-                <option value="Celestial"></option>
-                <option value="Darkin"></option>
-                <option value="Demon"></option>
-                <option value="Dragon"></option>
-                <option value="Faerie"></option>
-                <option value="Golem"></option>
-                <option value="Human"></option>
-                <option value="Minotaur"></option>
-                <option value="Naga"></option>
-                <option value="Plague Rat"></option>
-                <option value="Poro"></option>
-                <option value="Revenant"></option>
-                <option value="Spirit"></option>
-                <option value="Treant"></option>
-                <option value="Troll"></option>
-                <option value="Vastayan"></option>
-                <option value="Voidborn"></option>
-                <option value="Wolf"></option>
-                <option value="Yeti"></option>
-                <option value="Yordle"></option>
-            </datalist>
-            </div>
-
-            <div>
-              <label>Region (Choose one or more...)</label>
-              <div role="group" aria-label="Regions">
-                <label><input type="checkbox" name="region" value="region1" /> Bandle City</label>
-                <label><input type="checkbox" name="region" value="region2" /> Bilgewater</label>
-                <label><input type="checkbox" name="region" value="region3" /> Demacia</label>
-                <label><input type="checkbox" name="region" value="region4" /> Ionia</label>
-                <label><input type="checkbox" name="region" value="region5" /> Ixtal</label>
-                <label><input type="checkbox" name="region" value="region6" /> Noxus</label>
-                <label><input type="checkbox" name="region" value="region7" /> Piltover</label>
-                <label><input type="checkbox" name="region" value="region8" /> Shadow Isles</label>
-                <label><input type="checkbox" name="region" value="region9" /> Shurima</label>
-                <label><input type="checkbox" name="region" value="region10" /> Targon</label>
-                <label><input type="checkbox" name="region" value="region11" /> Freljord</label>
-                <label><input type="checkbox" name="region" value="region12" /> Void</label>
-                <label><input type="checkbox" name="region" value="region13" /> Zaun</label>
-              </div>
-            </div>
-
-            <div>
-              <label for="lore">Lore (max 500 charactors)</label>
-              <textarea name="lore" maxlength="500" placeholder="Type your champions lore."></textarea>
-            </div>
-
-            <div>
-              <label for="splashart">Splashart (Upload Image)</label>
-              <input name="splashart" type="file" accept="image/*" />
-            </div>
-
-          </div>
-        </form>
-      </div> 
-      
-    </section>
-    <section>
-      <h2>Gameplay</h2>
-      <p >Gameplay settings and features</p>
-
-      <div>
-        <form>
-          <div>
-            <div>
-              <label>Class</label>
               <div>
-                <label><input type="radio" name="class" value="class1" /> Enchanter</label>
-                <label><input type="radio" name="class" value="class2" /> Fighter</label>
-                <label><input type="radio" name="class" value="class3" /> Mage</label>
-                <label><input type="radio" name="class" value="class4" /> Marksman</label>
-                <label><input type="radio" name="class" value="class5" /> Assassin</label>
-                <label><input type="radio" name="class" value="class6" /> Tank</label>
-                <label><input type="radio" name="class" value="class7" /> Specialist</label>
+                <label>Name</label>
+                <input name="name" type="text" placeholder="Champion Name" />
               </div>
-            </div>
 
-            <div>
-              <label>Position</label>
               <div>
-                <label><input type="checkbox" name="pos" value="pos1" /> Top</label>
-                <label><input type="checkbox" name="pos" value="pos2" /> Mid</label>
-                <label><input type="checkbox" name="pos" value="pos3" /> Jungle</label>
-                <label><input type="checkbox" name="pos" value="pos4" /> Bot</label>
-                <label><input type="checkbox" name="pos" value="pos5" /> Support</label>
+                <label for="gender">Gender</label>
+                <select name="gender">
+                  <option value="">— Choose —</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="unknown">Unknown</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
-            </div>
 
-            <div>
-              <label>Difficulty</label>
               <div>
-                <input name="difficulty" type="range" min="1" max="3" step="1" aria-valuemin="1" aria-valuemax="3" />
+                <label for="age">Age</label>
+                <input
+                  name="age"
+                  type="number"
+                  min="0"
+                  max="99999"
+                  placeholder="Age"
+                />
+              </div>
+
+              <div>
+                <label for="main-species">Main Species</label>
+                <input
+                  id="main-species"
+                  name="main-species"
+                  list="main-species-list"
+                  placeholder="Search or Choose..."
+                />
+                <datalist id="main-species-list">
+                  <option value="Ascended"></option>
+                  <option value="Bear"></option>
+                  <option value="Cat"></option>
+                  <option value="Celestial"></option>
+                  <option value="Darkin"></option>
+                  <option value="Demon"></option>
+                  <option value="Dragon"></option>
+                  <option value="Faerie"></option>
+                  <option value="Golem"></option>
+                  <option value="Human"></option>
+                  <option value="Minotaur"></option>
+                  <option value="Naga"></option>
+                  <option value="Plague Rat"></option>
+                  <option value="Poro"></option>
+                  <option value="Revenant"></option>
+                  <option value="Spirit"></option>
+                  <option value="Treant"></option>
+                  <option value="Troll"></option>
+                  <option value="Vastayan"></option>
+                  <option value="Voidborn"></option>
+                  <option value="Wolf"></option>
+                  <option value="Yeti"></option>
+                  <option value="Yordle"></option>
+                </datalist>
+              </div>
+
+              <div>
+                <label for="second-species">Secondary Species</label>
+                <input
+                  id="second-species"
+                  name="second-species"
+                  list="second-species-list"
+                  placeholder="Search or Choose..."
+                />
+                <datalist id="second-species-list">
+                  <option value="Ascended"></option>
+                  <option value="Bear"></option>
+                  <option value="Cat"></option>
+                  <option value="Celestial"></option>
+                  <option value="Darkin"></option>
+                  <option value="Demon"></option>
+                  <option value="Dragon"></option>
+                  <option value="Faerie"></option>
+                  <option value="Golem"></option>
+                  <option value="Human"></option>
+                  <option value="Minotaur"></option>
+                  <option value="Naga"></option>
+                  <option value="Plague Rat"></option>
+                  <option value="Poro"></option>
+                  <option value="Revenant"></option>
+                  <option value="Spirit"></option>
+                  <option value="Treant"></option>
+                  <option value="Troll"></option>
+                  <option value="Vastayan"></option>
+                  <option value="Voidborn"></option>
+                  <option value="Wolf"></option>
+                  <option value="Yeti"></option>
+                  <option value="Yordle"></option>
+                </datalist>
+              </div>
+
+              <div>
+                <label>Region (Choose one or more...)</label>
+                <div role="group" aria-label="Regions">
+                  <label
+                    ><input type="checkbox" name="region" value="region1" />
+                    Bandle City</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region2" />
+                    Bilgewater</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region3" />
+                    Demacia</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region4" />
+                    Ionia</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region5" />
+                    Ixtal</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region6" />
+                    Noxus</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region7" />
+                    Piltover</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region8" />
+                    Shadow Isles</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region9" />
+                    Shurima</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region10" />
+                    Targon</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region11" />
+                    Freljord</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region12" />
+                    Void</label
+                  >
+                  <label
+                    ><input type="checkbox" name="region" value="region13" />
+                    Zaun</label
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label for="lore">Lore (max 500 charactors)</label>
+                <textarea
+                  name="lore"
+                  maxlength="500"
+                  placeholder="Type your champions lore."
+                ></textarea>
+              </div>
+
+              <div>
+                <label for="splashart">Splashart (Upload Image)</label>
+                <input name="splashart" type="file" accept="image/*" />
               </div>
             </div>
+          </form>
+        </div>
+      </section>
+      <section>
+        <h2>Gameplay</h2>
+        <p>Gameplay settings and features</p>
 
+        <div>
+          <form>
             <div>
-              <label>Ressource Type</label>
-              <select name="resource">
-                <option value="">— Choose —</option>
-                <option value="res1">Energy</option>
-                <option value="res2">Ferocity</option>
-                <option value="res3">Flow</option>
-                <option value="res4">Frenzy</option>
-                <option value="res5">Fury</option>
-                <option value="res6">Heat</option>
-                <option value="res7">Health</option>
-                <option value="res8">Mana</option>
-                <option value="res9">Manaless</option>
-                <option value="res10">Rage</option>
-                <option value="res11">Shield</option>
-              </select>
-            </div>
+              <div>
+                <label>Class</label>
+                <div>
+                  <label
+                    ><input type="radio" name="class" value="class1" />
+                    Enchanter</label
+                  >
+                  <label
+                    ><input type="radio" name="class" value="class2" />
+                    Fighter</label
+                  >
+                  <label
+                    ><input type="radio" name="class" value="class3" />
+                    Mage</label
+                  >
+                  <label
+                    ><input type="radio" name="class" value="class4" />
+                    Marksman</label
+                  >
+                  <label
+                    ><input type="radio" name="class" value="class5" />
+                    Assassin</label
+                  >
+                  <label
+                    ><input type="radio" name="class" value="class6" />
+                    Tank</label
+                  >
+                  <label
+                    ><input type="radio" name="class" value="class7" />
+                    Specialist</label
+                  >
+                </div>
+              </div>
 
+              <div>
+                <label>Position</label>
+                <div>
+                  <label
+                    ><input type="checkbox" name="pos" value="pos1" />
+                    Top</label
+                  >
+                  <label
+                    ><input type="checkbox" name="pos" value="pos2" />
+                    Mid</label
+                  >
+                  <label
+                    ><input type="checkbox" name="pos" value="pos3" />
+                    Jungle</label
+                  >
+                  <label
+                    ><input type="checkbox" name="pos" value="pos4" />
+                    Bot</label
+                  >
+                  <label
+                    ><input type="checkbox" name="pos" value="pos5" />
+                    Support</label
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label>Difficulty</label>
+                <div>
+                  <input
+                    name="difficulty"
+                    type="range"
+                    min="1"
+                    max="3"
+                    step="1"
+                    aria-valuemin="1"
+                    aria-valuemax="3"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label>Ressource Type</label>
+                <select name="resource">
+                  <option value="">— Choose —</option>
+                  <option value="res1">Energy</option>
+                  <option value="res2">Ferocity</option>
+                  <option value="res3">Flow</option>
+                  <option value="res4">Frenzy</option>
+                  <option value="res5">Fury</option>
+                  <option value="res6">Heat</option>
+                  <option value="res7">Health</option>
+                  <option value="res8">Mana</option>
+                  <option value="res9">Manaless</option>
+                  <option value="res10">Rage</option>
+                  <option value="res11">Shield</option>
+                </select>
+              </div>
+
+              <div>
+                <label>Attack Range</label>
+                <div>
+                  <input
+                    id="atk-range"
+                    name="atk-range"
+                    type="range"
+                    min="125"
+                    max="1000"
+                    step="1"
+                    value="125"
+                    oninput="atkValue.textContent = this.value"
+                  />
+                  <span id="atkValue">125</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section>
+        <h2>Abilities</h2>
+        <p>Define your passive and abilities</p>
+
+        <div>
+          <form>
             <div>
-            <label>Attack Range</label>
-            <div>
-                <input id="atk-range" name="atk-range" type="range" min="125" max="1000" step="1" value="125" oninput="atkValue.textContent = this.value" />
-                <span id="atkValue">125</span>
+              <div>
+                <label>Passive</label>
+                <textarea
+                  name="passive"
+                  maxlength="500"
+                  placeholder="Passive description (max 500 charactors)"
+                ></textarea>
+              </div>
+
+              <div>
+                <label>Q</label>
+                <textarea
+                  name="q"
+                  maxlength="500"
+                  placeholder="Q description (max 500 charactors)"
+                ></textarea>
+              </div>
+
+              <div>
+                <label>W</label>
+                <textarea
+                  name="w"
+                  maxlength="500"
+                  placeholder="W description (max 500 charactors)"
+                ></textarea>
+              </div>
+
+              <div>
+                <label>E</label>
+                <textarea
+                  name="e"
+                  maxlength="500"
+                  placeholder="E description (max 500 charactors)"
+                ></textarea>
+              </div>
+
+              <div>
+                <label>R</label>
+                <textarea
+                  name="r"
+                  maxlength="500"
+                  placeholder="R description (max 500 charactors)"
+                ></textarea>
+              </div>
             </div>
-            </div>
+          </form>
+        </div>
+      </section>
 
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section>
-      <h2>Abilities</h2>
-      <p>Define your passive and abilities</p>
-
-      <div>
-        <form>
-          <div>
-
-            <div>
-              <label>Passive</label>
-              <textarea name="passive" maxlength="500" placeholder="Passive description (max 500 charactors)"></textarea>
-            </div>
-
-            <div>
-              <label>Q</label>
-              <textarea name="q" maxlength="500" placeholder="Q description (max 500 charactors)"></textarea>
-            </div>
-
-            <div>
-              <label>W</label>
-              <textarea name="w" maxlength="500" placeholder="W description (max 500 charactors)"></textarea>
-            </div>
-
-            <div>
-              <label>E</label>
-              <textarea name="e" maxlength="500" placeholder="E description (max 500 charactors)"></textarea>
-            </div>
-
-            <div>
-              <label>R</label>
-              <textarea name="r" maxlength="500" placeholder="R description (max 500 charactors)"></textarea>
-            </div>
-
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section>
-    <div>
-        <button type="button">Create Champion</button>
-    </div>
-    </section>
-  </main>
-</body>
+      <section>
+        <div>
+          <button type="button">Create Champion</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
