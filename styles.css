@@ -133,7 +133,6 @@ textarea {
   resize: vertical;
 }
 
-
 input:focus,
 select:focus,
 textarea:focus {
@@ -222,8 +221,14 @@ button:hover {
   filter: brightness(1.08);
 }
 
-
 section:last-of-type > div {
   display: flex;
   justify-content: flex-end;
+}
+
+#classSelector label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
 }

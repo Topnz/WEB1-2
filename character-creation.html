@@ -18,7 +18,7 @@
 
     <main>
       <!-- TODO: add action to form-->
-      <form action="/character-creation.html" method="post" >
+      <form action="/character-creation.html" method="post">
         <section>
           <h2>INFO</h2>
           <p>
@@ -29,7 +29,13 @@
           <div>
             <div>
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Champion Name" required />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Champion Name"
+                required
+              />
             </div>
 
             <div>
@@ -128,20 +134,112 @@
 
             <div>
               <label>Region (Choose one or more...)</label>
-              <div role="group" aria-label="Regions" > <!-- TODO: Make this so its required for one no matter what it is -->
-                <label for="region1"><input type="checkbox" id="region1" name="region" value="region1" />Bandle City</label>
-                <label for="region2"><input type="checkbox" id="region2" name="region" value="region2" />Bilgewater</label>
-                <label for="region3"><input type="checkbox" id="region3" name="region" value="region3" />Demacia</label>
-                <label for="region4"><input type="checkbox" id="region4" name="region" value="region4" />Ionia</label>
-                <label for="region5"><input type="checkbox" id="region5" name="region" value="region5" />Ixtal</label>
-                <label for="region6"><input type="checkbox" id="region6" name="region" value="region6" />Noxus</label>
-                <label for="region7"><input type="checkbox" id="region7" name="region" value="region7" />Piltover</label>
-                <label for="region8"><input type="checkbox" id="region8" name="region" value="region8" />Shadow Isles</label>
-                <label for="region9"><input type="checkbox" id="region9" name="region" value="region9" />Shurima</label>
-                <label for="region10"><input type="checkbox" id="region10" name="region" value="region10" />Targon</label>
-                <label for="region11"><input type="checkbox" id="region11" name="region" value="region11" />Freljord</label>
-                <label for="region12"><input type="checkbox" id="region12" name="region" value="region12" />Void</label>
-                <label for="region13"><input type="checkbox" id="region13" name="region" value="region13" />Zaun</label>
+              <div role="group" aria-label="Regions">
+                <!-- TODO: Make this so its required for one no matter what it is -->
+                <label for="region1"
+                  ><input
+                    type="checkbox"
+                    id="region1"
+                    name="region"
+                    value="region1"
+                  />Bandle City</label
+                >
+                <label for="region2"
+                  ><input
+                    type="checkbox"
+                    id="region2"
+                    name="region"
+                    value="region2"
+                  />Bilgewater</label
+                >
+                <label for="region3"
+                  ><input
+                    type="checkbox"
+                    id="region3"
+                    name="region"
+                    value="region3"
+                  />Demacia</label
+                >
+                <label for="region4"
+                  ><input
+                    type="checkbox"
+                    id="region4"
+                    name="region"
+                    value="region4"
+                  />Ionia</label
+                >
+                <label for="region5"
+                  ><input
+                    type="checkbox"
+                    id="region5"
+                    name="region"
+                    value="region5"
+                  />Ixtal</label
+                >
+                <label for="region6"
+                  ><input
+                    type="checkbox"
+                    id="region6"
+                    name="region"
+                    value="region6"
+                  />Noxus</label
+                >
+                <label for="region7"
+                  ><input
+                    type="checkbox"
+                    id="region7"
+                    name="region"
+                    value="region7"
+                  />Piltover</label
+                >
+                <label for="region8"
+                  ><input
+                    type="checkbox"
+                    id="region8"
+                    name="region"
+                    value="region8"
+                  />Shadow Isles</label
+                >
+                <label for="region9"
+                  ><input
+                    type="checkbox"
+                    id="region9"
+                    name="region"
+                    value="region9"
+                  />Shurima</label
+                >
+                <label for="region10"
+                  ><input
+                    type="checkbox"
+                    id="region10"
+                    name="region"
+                    value="region10"
+                  />Targon</label
+                >
+                <label for="region11"
+                  ><input
+                    type="checkbox"
+                    id="region11"
+                    name="region"
+                    value="region11"
+                  />Freljord</label
+                >
+                <label for="region12"
+                  ><input
+                    type="checkbox"
+                    id="region12"
+                    name="region"
+                    value="region12"
+                  />Void</label
+                >
+                <label for="region13"
+                  ><input
+                    type="checkbox"
+                    id="region13"
+                    name="region"
+                    value="region13"
+                  />Zaun</label
+                >
               </div>
             </div>
 
@@ -157,7 +255,12 @@
 
             <div>
               <label for="splashart">Splashart (Upload Image)</label>
-              <input id="splashart" name="splashart" type="file" accept="image/*" />
+              <input
+                id="splashart"
+                name="splashart"
+                type="file"
+                accept="image/*"
+              />
             </div>
           </div>
         </section>
@@ -169,30 +272,130 @@
           <div>
             <div>
               <label>Choose a class for your champion:</label>
-              <div>
-                <label for="class1">Enchanter<input type="radio" id="class1" name="class" value="class1" required /></label>
-                <label for="class2">Fighter<input type="radio" id="class2" name="class" value="class2" /></label>
-                <label for="class3">Mage<input type="radio" id="class3" name="class" value="class3" /></label>
-                <label for="class4">Marksman<input type="radio" id="class4" name="class" value="class4" /></label>
-                <label for="class5">Assassin<input type="radio" id="class5" name="class" value="class5" /></label>
-                <label for="class6">Tank<input type="radio" id="class6" name="class" value="class6" /></label>
-                <label for="class7">Specialist<input type="radio" id="class7" name="class" value="class7" /></label>
+              <div id="classSelector">
+                <label for="class1"
+                  >Enchanter
+                  <div>
+                    <input
+                      type="radio"
+                      id="class1"
+                      name="class"
+                      value="class1"
+                      required
+                    /></div
+                ></label>
+                <label for="class2"
+                  >Fighter
+                  <div>
+                    <input
+                      type="radio"
+                      id="class2"
+                      name="class"
+                      value="class2"
+                    /></div
+                ></label>
+                <label for="class3"
+                  >Mage
+                  <div>
+                    <input
+                      type="radio"
+                      id="class3"
+                      name="class"
+                      value="class3"
+                    /></div
+                ></label>
+                <label for="class4"
+                  >Marksman
+                  <div>
+                    <input
+                      type="radio"
+                      id="class4"
+                      name="class"
+                      value="class4"
+                    /></div
+                ></label>
+                <label for="class5"
+                  >Assassin
+                  <div>
+                    <input
+                      type="radio"
+                      id="class5"
+                      name="class"
+                      value="class5"
+                    /></div
+                ></label>
+                <label for="class6"
+                  >Tank
+                  <div>
+                    <input
+                      type="radio"
+                      id="class6"
+                      name="class"
+                      value="class6"
+                    /></div
+                ></label>
+                <label for="class7"
+                  >Specialist
+                  <div>
+                    <input
+                      type="radio"
+                      id="class7"
+                      name="class"
+                      value="class7"
+                    /></div
+                ></label>
               </div>
             </div>
 
             <div>
               <label>Position</label>
-              <div role="group" aria-label="positions"> <!-- TODO: Make this so its required for one no matter what it is -->
-                <label for="pos1"><input type="checkbox" id="pos1" name="pos" value="pos1" />Top</label>
-                <label for="pos2"><input type="checkbox" id="pos2" name="pos" value="pos2" />Mid</label>
-                <label for="pos3"><input type="checkbox" id="pos3" name="pos" value="pos3" />Jungle</label>
-                <label for="pos4"><input type="checkbox" id="pos4" name="pos" value="pos4" />Bot</label>
-                <label for="pos5"><input type="checkbox" id="pos5" name="pos" value="pos5" />Support</label>
+              <div role="group" aria-label="positions">
+                <!-- TODO: Make this so its required for one no matter what it is -->
+                <label for="pos1"
+                  ><input
+                    type="checkbox"
+                    id="pos1"
+                    name="pos"
+                    value="pos1"
+                  />Top</label
+                >
+                <label for="pos2"
+                  ><input
+                    type="checkbox"
+                    id="pos2"
+                    name="pos"
+                    value="pos2"
+                  />Mid</label
+                >
+                <label for="pos3"
+                  ><input
+                    type="checkbox"
+                    id="pos3"
+                    name="pos"
+                    value="pos3"
+                  />Jungle</label
+                >
+                <label for="pos4"
+                  ><input
+                    type="checkbox"
+                    id="pos4"
+                    name="pos"
+                    value="pos4"
+                  />Bot</label
+                >
+                <label for="pos5"
+                  ><input
+                    type="checkbox"
+                    id="pos5"
+                    name="pos"
+                    value="pos5"
+                  />Support</label
+                >
               </div>
             </div>
 
             <div>
-              <label for="difficulty">Difficulty</label>
+              <label for="difficulty">Difficulty (1-3)</label>
               <input
                 id="difficulty"
                 name="difficulty"
@@ -249,23 +452,53 @@
           <div>
             <div>
               <label for="passive">Passive</label>
-              <textarea id="passive" name="passive" maxlength="500" placeholder="Passive description (max 500 characters)" required></textarea>
+              <textarea
+                id="passive"
+                name="passive"
+                maxlength="500"
+                placeholder="Passive description (max 500 characters)"
+                required
+              ></textarea>
             </div>
             <div>
               <label for="q">Q</label>
-              <textarea id="q" name="q" maxlength="500" placeholder="Q description (max 500 characters)" required></textarea>
+              <textarea
+                id="q"
+                name="q"
+                maxlength="500"
+                placeholder="Q description (max 500 characters)"
+                required
+              ></textarea>
             </div>
             <div>
               <label for="w">W</label>
-              <textarea id="w" name="w" maxlength="500" placeholder="W description (max 500 characters)" required></textarea>
+              <textarea
+                id="w"
+                name="w"
+                maxlength="500"
+                placeholder="W description (max 500 characters)"
+                required
+              ></textarea>
             </div>
             <div>
               <label for="e">E</label>
-              <textarea id="e" name="e" maxlength="500" placeholder="E description (max 500 characters)" required></textarea>
+              <textarea
+                id="e"
+                name="e"
+                maxlength="500"
+                placeholder="E description (max 500 characters)"
+                required
+              ></textarea>
             </div>
             <div>
               <label for="r">R</label>
-              <textarea id="r" name="r" maxlength="500" placeholder="R description (max 500 characters)" required></textarea>
+              <textarea
+                id="r"
+                name="r"
+                maxlength="500"
+                placeholder="R description (max 500 characters)"
+                required
+              ></textarea>
             </div>
           </div>
         </section>
