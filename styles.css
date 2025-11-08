@@ -27,6 +27,8 @@ body {
   --muted: #9fb0c3;
   --primary: #c8aa6e;
   --accent: #0ac8b9;
+  --valid: hsl(143, 100%, 26%);
+  --invalid: hsl(348, 55%, 49%);
   --border: rgba(200, 170, 110, 0.35);
   --radius: 8px;
 }
@@ -96,14 +98,17 @@ p {
 
 form {
   display: grid;
+  gap: 16px;
+}
+
+form > section > div {
+  display: grid;
   gap: 8px;
 }
 
 @media (min-width: 760px) {
-  form > div {
-    display: grid;
+  form > section > div {
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
   }
 }
 
@@ -128,10 +133,18 @@ textarea {
   resize: vertical;
 }
 
+
 input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--accent);
+  outline: none;
+}
+
+input:not(:placeholder-shown):invalid,
+select:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+  border-color: var(--invalid);
   outline: none;
 }
 
@@ -172,6 +185,7 @@ label input[type="checkbox"]:checked::after {
   left: 50%;
   transform: translate(-50%, -58%); /* vertical nudge */
 }
+
 /* RANGE */
 input[type="range"] {
   width: 100%;
@@ -194,7 +208,6 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--accent);
 }
 
-/* BUTTON */
 button {
   background: var(--primary);
   color: #0a1428;
@@ -208,6 +221,7 @@ button {
 button:hover {
   filter: brightness(1.08);
 }
+
 
 section:last-of-type > div {
   display: flex;
